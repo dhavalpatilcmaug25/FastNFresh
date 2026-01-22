@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2e7d32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h2 {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #c8e6c9;
+}
+
+/* Active/selected nav link color (make it light green) */
+.navbar .nav-link.active,
+.navbar .nav-link:active,
+.header a.active {
+  color: #c8e6c9 !important;
+}
+
+/* Also ensure focus state uses same color */
+.navbar .nav-link:focus {
+  color: #c8e6c9 !important;
+}
+
+/* Generic Section Layout */
+div > h1 {
+  margin: 30px 0 10px 0;
+  text-align: center;
+  color: #2e7d32;
+}
+
+div > p {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Buttons */
+button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #256628;
+}
+
+/* Signup & Signin Page */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 70px);
+}
+
+.auth-form form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.auth-form button {
+  width: 100%;
+  background-color: #2e7d32;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 70px);
+  background: #f9f9f9;
+}
+
+.login-container form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.login-container h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.login-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #256628;
+}
+
+/* Signup Page */
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.signup-container h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.signup-form {
+  background-color: #fff;
+  padding: 35px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.signup-form label {
+  font-weight: 500;
+  color: #333;
+}
+
+.signup-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.signup-form input:focus {
+  border-color: #2e7d32;
+}
+
+.signup-form button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+  background-color: #256628;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.signin-link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signin-link a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* .contact-container {
+  width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+ */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 18px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #256428;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background: #0b7285;
+  color: white;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header a {
+  color: white;
+  margin-left: 12px;
+  text-decoration: none;
+}
+main {
+  padding: 16px;
+}
+button {
+  margin-left: 8px;
+}
+.category-form label,
+.review-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+.modal {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 12px;
+}
